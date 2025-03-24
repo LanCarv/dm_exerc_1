@@ -34,7 +34,7 @@ DESAFIO_1/
 ├── .env                    # Caminho do ZIP (ZIP_PATH_1, EXTRACT_PATH_1)
 │
 ├── dados/                  # Contém o .zip e CSVs extraídos
-├── previsao/               # Submissões geradas
+├── previsao/               # Previsões geradas
 ├── ml_pipeline/            # Módulos separados por etapa
 │   ├── etl.py
 │   ├── features.py
@@ -86,7 +86,7 @@ uvicorn api_pipeline:app --reload
 | GET    | `/treinar`   | Treina os modelos                |
 | GET    | `/avaliar`   | Avalia os modelos e loga no MLflow |
 | GET    | `/prever`    | Gera submissão e baixa CSV       |
-| GET    | `/pipeline`  | Executa tudo e baixa submissão   |
+| GET    | `/pipeline`  | Executa tudo e baixa as previsões no próprio Browser   |
 
 ---
 
@@ -107,7 +107,7 @@ Crie um arquivo `.gitignore` na raiz com:
 __pycache__/
 *.pyc
 .env
-desafio_tecnico/
+seu_ambiente_venv/
 previsao/
 mlruns/
 *.zip
